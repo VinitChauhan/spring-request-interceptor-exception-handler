@@ -1,10 +1,10 @@
 package com.learning.boot.requestInterceptor.exception;
 
-public class InvalidFieldException extends RuntimeException {
+public class InvalidHeaderFieldException extends RuntimeException {
 
-private String message;
+    private String  message;
 
-    public InvalidFieldException(String message) {
+    public InvalidHeaderFieldException(String message) {
         this.message = message;
     }
 
