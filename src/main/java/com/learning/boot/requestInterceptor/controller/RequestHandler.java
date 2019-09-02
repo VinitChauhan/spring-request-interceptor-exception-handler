@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/request")
 public class RequestHandler {
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "hello";
+    }
+
     @PostMapping
     public String handleRequest(@RequestHeader("auth-key") String authKey, @RequestBody Student student) {
         if (StringUtils.isEmpty(student.getLastName())) {
